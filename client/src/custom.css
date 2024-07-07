@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.img {
+    width: 120x;
+    height: 110px;
+}
+
+.boot {
+    
+    background-image: url('https://res.cloudinary.com/dfu4raix4/image/upload/v1718959679/spfhrfucaw1ygucu7jrp.jpg');
+    background-size: cover;
+    height: 110vh;
+width: 100%;
+
+}
+.boot1 {
+    
+  background-image: url('https://res.cloudinary.com/dfu4raix4/image/upload/v1718959679/spfhrfucaw1ygucu7jrp.jpg');
+  background-size: cover;
+  height: 250vh;
+width: 100%;
+
+}
+.bootpro {
+    
+  background-image: url('https://res.cloudinary.com/dfu4raix4/image/upload/v1718959679/spfhrfucaw1ygucu7jrp.jpg');
+  background-size: cover;
+  height: 125vh;
+width: 100%;
+
+}
+
+.box {
+    background-color: white;
+    background-size: cover;
+    width: 100%;
+
+}
+
+.sechead {
+  color: white;
+  font-weight: bold;
+  font-family: 'roboto';
+  font-size: x-large;
+  margin:20px;
+}
+.navb{
+
+    height: 18vh;
+}
+.auths{
+ padding-top: 10px;
+ margin-left: 30vw;
+ height: 20%px;
+ width: 400px;
+
+
+}
+.authspro{
+  padding-top: 10px;
+  margin-left: 35vw;
+  height: 20%px;
+  width: 450px;
+ 
+ 
+ }
+.img1{
+
+height:350px;
+width:370px;
+object-fit: cover;
+
+}
+.img2{
+
+    height:330pxpx;
+    width:400px;
+    object-fit: cover;
+    
+    }
+.box1{
+
+    height: auto;
+    width:600px ;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(182, 211, 85);
+}
+.flex-container > div {
+    width: 45%; /* Adjust the width as necessary */
+    box-sizing: border-box;
+}
+.custom-link {
+    text-decoration: underline;
+    text-decoration-color: rgba(14, 14, 14, 0.856); /* Change this to your desired color */
+}
+
+
+
+form {
+    
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+   
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 7%;
+    height: 7%;
+
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  background-color: transparent;
+    
+
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+  .name1{
+
+color:#1d1b1c    ;
+font-size:25px;
+font-weight: bolder;
+
+  }
+  .break{
+    text-shadow: 2px 2px 8px #f1e9e9;
+  }
+  .err{
+    color: #f44336;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .pra{
+    color: #171817;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 2px 2px 8px #f1e9e9 ;
+    
+  }
+
+  .head{
+font-size: 40px;
+font-family: "roboto";
+font-weight: bolder;
+
+color: rgb(230, 54, 5);
+text-shadow: 2px 2px 8px #100c0c;
+
+  }
+  .optn{
+
+ color: #3d12c0;
+ font-size: 20px;
+ font-family: "roboto";
+ font-weight: bold;   
+  }
+  .btnn{
+font-family: "roboto";
+color: #171817;
+font-weight: bolder;
+font-size: 20px;
+width: 30%;
+background-color: #04AA6D;
+margin-left: 90px;
+margin-top: 15px;
+text-shadow: 2px 2px 8px #0c0c0c;
+
+  }
+  .btnnn{
+    font-family: "roboto";
+    color: #171817;
+    font-weight: bolder;
+    font-size: 20px;
+    width: 50%;
+    background-color: #04AA6D;
+    margin-left: 90px;
+    margin-top: 15px;
+    text-shadow: 2px 2px 8px #0c0c0c;
+    
+      }
+  .inpt{
+color: #0c0c0c;
+font-family: "roboto";
+background-color: #a3a0a0;
+font-size: 22px;
+font-weight: bold;
+font-style: italic;
+border-color: #0c0c0c;
+border-radius: 10px;
+
+  }
