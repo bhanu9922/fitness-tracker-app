@@ -30,6 +30,10 @@ app.use(cors(
 app.use(express.json());
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+    res.json("Hello");
+})
+
 
 // Routes
 app.use('/api/users', userRoutes);
