@@ -22,7 +22,7 @@ connectDB();
 // Middleware
 app.use(cors(
    {
-        origin: ["https://deploy-mern-frontend.vercel.app"],
+        origin: ["https://fitness-tracker-app-api.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
