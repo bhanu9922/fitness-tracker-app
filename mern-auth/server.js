@@ -20,13 +20,7 @@ const PORT = process.env.PORT || 3000;
 connectDB();
 
 // Middleware
-app.use(cors(
-   {
-        origin: ["https://fitness-tracker-app-api.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
