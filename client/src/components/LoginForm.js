@@ -77,7 +77,7 @@ const LoginForm = () => {
 
 
                             <nav >
-                            <Link to="#" onClick={() => handleLinkClick('/home')} className='custom-link sechead' state={{ message: 'Please log in with your username and password.' }}>Home</Link>
+                            <Link to="#" onClick={() => handleLinkClick('/')} className='custom-link sechead' state={{ message: 'Please log in with your username and password.' }}>Home</Link>
       
         <Link to="#" onClick={() => handleLinkClick('/profile')} className='custom-link sechead' state={{ message: 'Please log in with your username and password.' }  }>Profile</Link>
         <Link to="#" onClick={() => handleLinkClick('/goals')} className='custom-link sechead' state={{ message: 'Please log in with your username and password.' }}>Goals</Link>

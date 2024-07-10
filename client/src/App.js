@@ -34,7 +34,7 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home/>} />
         <Route path="/goals" element={<GoalsPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/anu" element={<div>
@@ -49,7 +49,7 @@ const App = () => {
         <Route path="/udhi" element={<WorkoutPlan />} />
         <Route path="/diet" element={<Diet />} />
         <Route path="/track" element={<Track />} />
-        <Route path="*" element={<Navigate to="/login" state={{ message: 'Please log in with your username and password.' }} />} />
+        <Route path="/*" element={<Navigate to="/home" state={{ message: 'Please log in with your username and password.' }} />} />
       </Routes>
     </Router>
   );

@@ -7,8 +7,8 @@ const Home = () => {
   const message = location.state?.message;
   return (
     <div class="box">
-    <div class="col-12">
-    <div className="col-12">
+
+<div className="col-12">
         <nav className="navbar navbar-expand-lg navbar-light bg-black navb">
           <a className="navbar-brand">
             <img src="https://res.cloudinary.com/dfu4raix4/image/upload/v1718950120/atklqo31snvpy22d82t9.png" className="img" />
@@ -119,7 +119,7 @@ const Home = () => {
 
 
                 </div>
-                </div>
+    
     
    
   );
