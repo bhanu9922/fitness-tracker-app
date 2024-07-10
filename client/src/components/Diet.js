@@ -17,7 +17,7 @@ const Diet = () => {
 
     const fetchDiets = async () => {
         try {
-            const response = await axios.get('https://fitness-tracker-app-uu0j.onrender.com/diets'); // Update this URL to your backend endpoint
+            const response = await axios.get('http://localhost:3000/diets'); // Update this URL to your backend endpoint
             setDiets(response.data);
         } catch (error) {
             console.error('Error fetching diets:', error);
@@ -26,7 +26,7 @@ const Diet = () => {
 
     const addDiet = async () => {
         try {
-            const response = await axios.post('https://fitness-tracker-app-uu0j.onrender.com/diets', currentDiet); // Update this URL to your backend endpoint
+            const response = await axios.post('http://localhost:3000/diets', currentDiet); // Update this URL to your backend endpoint
             setDiets([...diets, response.data]);
             setCurrentDiet({ mealType: '', items: [{ name: '', macros: { protein: '', carbs: '', fat: '' }, calories: '' }] });
         } catch (error) {
@@ -41,7 +41,7 @@ const Diet = () => {
 
     const saveDiet = async () => {
         try {
-            const response = await axios.patch(`https://fitness-tracker-app-uu0j.onrender.com/diets/${currentDiet._id}`, currentDiet); // Update this URL to your backend endpoint
+            const response = await axios.patch(`http://localhost:3000/diets/${currentDiet._id}`, currentDiet); // Update this URL to your backend endpoint
             const updatedDiets = diets.map(diet =>
                 diet._id === currentDiet._id ? response.data : diet
             );
@@ -55,7 +55,7 @@ const Diet = () => {
 
     const deleteDiet = async (id) => {
         try {
-            await axios.delete(`https://fitness-tracker-app-uu0j.onrender.com/diets/${id}`); // Update this URL to your backend endpoint
+            await axios.delete(`http://localhost:3000/diets/${id}`); // Update this URL to your backend endpoint
             setDiets(diets.filter(diet => diet._id !== id));
         } catch (error) {
             console.error('Error deleting diet:', error);

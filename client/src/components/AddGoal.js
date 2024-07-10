@@ -10,7 +10,7 @@ const AddGoal = ({ goal }) => {
     e.preventDefault();
     const newGoal = { goal, aim, targetWeight, targetDate };
 
-    axios.post('https://fitness-tracker-app-uu0j.onrender.com/api/goals/goal', newGoal)
+    axios.post('http://localhost:3000/api/goals/goal', newGoal)
       .then(response => {
         // Handle success
         console.log(response.data);

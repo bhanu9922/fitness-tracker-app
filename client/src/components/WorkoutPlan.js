@@ -27,7 +27,7 @@ const WorkoutPlan = () => {
 
     const fetchWorkoutPlans = async () => {
         try {
-            const response = await axios.get('https://fitness-tracker-app-uu0j.onrender.com/workout-plans'); // Update this URL to your backend endpoint
+            const response = await axios.get('http://localhost:3000/workout-plans'); // Update this URL to your backend endpoint
             setWorkoutPlans(response.data);
         } catch (error) {
             console.error('Error fetching workout plans:', error);
@@ -36,7 +36,7 @@ const WorkoutPlan = () => {
 
     const addWorkoutPlan = async () => {
         try {
-            const response = await axios.post('https://fitness-tracker-app-uu0j.onrender.com/workout-plans', currentWorkoutPlan); // Update this URL to your backend endpoint
+            const response = await axios.post('http://localhost:3000/workout-plans', currentWorkoutPlan); // Update this URL to your backend endpoint
             setWorkoutPlans([...workoutPlans, response.data]);
             setCurrentWorkoutPlan({ planName: '', level: '', types: '', day: '', warmup: '', exercises: '', cooldown: '', name: '', duration: '', frequency: '', intensity: '', description: '' });
         } catch (error) {
@@ -51,7 +51,7 @@ const WorkoutPlan = () => {
 
     const saveWorkoutPlan = async () => {
         try {
-            const response = await axios.patch(`https://fitness-tracker-app-uu0j.onrender.com/workout-plans/${currentWorkoutPlan._id}`, currentWorkoutPlan); // Update this URL to your backend endpoint
+            const response = await axios.patch(`http://localhost:3000/workout-plans/${currentWorkoutPlan._id}`, currentWorkoutPlan); // Update this URL to your backend endpoint
             const updatedPlans = workoutPlans.map(plan =>
                 plan._id === currentWorkoutPlan._id ? response.data : plan
             );
@@ -65,7 +65,7 @@ const WorkoutPlan = () => {
 
     const deleteWorkoutPlan = async (id) => {
         try {
-            await axios.delete(`https://fitness-tracker-app-uu0j.onrender.com/workout-plans/${id}`); // Update this URL to your backend endpoint
+            await axios.delete(`http://localhost:3000/workout-plans/${id}`); // Update this URL to your backend endpoint
             setWorkoutPlans(workoutPlans.filter(plan => plan._id !== id));
         } catch (error) {
             console.error('Error deleting workout plan:', error);

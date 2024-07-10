@@ -20,7 +20,7 @@ const Track = () => {
 
     const fetchTracks = async () => {
         try {
-            const response = await axios.get('https://fitness-tracker-app-uu0j.onrender.com/tracks');
+            const response = await axios.get('http://localhost:3000/tracks');
             setTracks(response.data);
         } catch (error) {
             console.error('Error fetching tracks:', error);
@@ -29,7 +29,7 @@ const Track = () => {
 
     const addTrack = async () => {
         try {
-            const response = await axios.post('https://fitness-tracker-app-uu0j.onrender.com/tracks', currentTrack);
+            const response = await axios.post('http://localhost:3000/tracks', currentTrack);
             setTracks([...tracks, response.data]);
             setCurrentTrack({ username: '', workoutsDone: '', sleep: '', steps: '', reminders: [''] });
         } catch (error) {
@@ -44,7 +44,7 @@ const Track = () => {
 
     const saveTrack = async () => {
         try {
-            const response = await axios.patch(`https://fitness-tracker-app-uu0j.onrender.com/tracks/${currentTrack._id}`, currentTrack);
+            const response = await axios.patch(`http://localhost:3000/tracks/${currentTrack._id}`, currentTrack);
             const updatedTracks = tracks.map(track =>
                 track._id === currentTrack._id ? response.data : track
             );
@@ -58,7 +58,7 @@ const Track = () => {
 
     const deleteTrack = async (id) => {
         try {
-            await axios.delete(`https://fitness-tracker-app-uu0j.onrender.com/tracks/${id}`);
+            await axios.delete(`http://localhost:3000/tracks/${id}`);
             setTracks(tracks.filter(track => track._id !== id));
         } catch (error) {
             console.error('Error deleting track:', error);
