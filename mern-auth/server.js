@@ -16,21 +16,12 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const dbUri = process.env.MONGO_URI || 'mongodb+srv://appalabhanu123:Bhanu134@cluster0.wdcayp8.mongodb.net/';
-const logLevel = process.env.LOG_LEVEL || 'debug';
-
-// Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 // Example API route
 app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello from server!' });
 });
 
-// Anything that doesn't match the above, send back index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-});
 
 
 
