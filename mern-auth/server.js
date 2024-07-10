@@ -8,6 +8,7 @@ const profileRoutes=require('./routes/profileRoutes')
 const goalRoutes = require('./routes/goalRoutes');
 const bodyParser = require('body-parser');
 require('dotenv').config();
+const path = require('path');
 
 
 
@@ -17,9 +18,20 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const dbUri = process.env.MONGO_URI || 'mongodb+srv://appalabhanu123:Bhanu134@cluster0.wdcayp8.mongodb.net/';
 const logLevel = process.env.LOG_LEVEL || 'debug';
-app.get('/api/users', (req, res) => {
-  res.json({ message: 'Users data' });
+
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+
+// Example API route
+app.get('/api/hello', (req, res) => {
+  res.json({ message: 'Hello from server!' });
 });
+
+// Anything that doesn't match the above, send back index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+});
+
 
 
 //connectDB
@@ -27,9 +39,7 @@ app.get('/api/users', (req, res) => {
 connectDB();
 
 // Middleware
-app.use(cors(
-
-));
+app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
