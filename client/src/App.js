@@ -14,11 +14,6 @@ import Diet from './components/Diet';
 import Track from './components/Track';
 import GoalsPage from './components/GoalsPage';
 
-const PrivateRoute = ({ children }) => {
-  const token = localStorage.getItem('token');
-  return token ? children : <Navigate to="/login" />;
-};
-
 const App = () => {
   const [tasks, setTasks] = useState([]);
   const [currentTask, setCurrentTask] = useState(null);

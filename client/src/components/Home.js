@@ -1,6 +1,6 @@
 // src/components/Home.js
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation,Link } from 'react-router-dom';
 
 const Home = () => {
   const location = useLocation();
@@ -8,34 +8,29 @@ const Home = () => {
   return (
     <div class="box">
     <div class="col-12">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-black navb">
-                        <a class="navbar-brand" href="#">
-
-                            <img src="https://res.cloudinary.com/dfu4raix4/image/upload/v1718950120/atklqo31snvpy22d82t9.png" class="img" />
-
-
-
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav ml-auto">
-                            
-                                <a class="nav-link active sechead "  href="#"  style={{ color: 'white'}}>
-                
-                                    <span class="sr-only">Home</span>
-                                </a>
-                                <a class="nav-link sechead" href="/profile" style={{ color: 'white'}}>Profile</a>
-                                <a class="nav-link sechead"  href="/goals" style={{ color: 'white'}}>Goals</a>
-                                <a class="nav-link sechead"  href="/udhi" style={{ color: 'white'}}>WorkoutPlans</a>
-                                <a class="nav-link sechead"  href="/kallu" style={{ color: 'white'}}>WorkoutTypes</a>
-                                <a class="nav-link sechead"  href="diet" style={{ color: 'white'}}>Diet</a>
-                                <a class="nav-link sechead"  href="/track" style={{ color: 'white'}}>Track</a>
-                           
-                            </div>
-                        </div>
-                    </nav>
+    <div className="col-12">
+        <nav className="navbar navbar-expand-lg navbar-light bg-black navb">
+          <a className="navbar-brand">
+            <img src="https://res.cloudinary.com/dfu4raix4/image/upload/v1718950120/atklqo31snvpy22d82t9.png" className="img" />
+          </a>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav ml-auto">
+              <nav>
+                <Link to="/home" className="custom-link sechead" state={{ message: 'Please log in with your username and password.' }}>Home</Link>
+                <Link to="/profile" className="custom-link sechead" state={{ message: 'Please log in with your username and password.' }}>Profile</Link>
+                <Link to="/goals" className="custom-link sechead" state={{ message: 'Please log in with your username and password.' }}>Goals</Link>
+                <Link to="/udhi" className="custom-link sechead" state={{ message: 'Please log in with your username and password.' }}>Workout Plans</Link>
+                <Link to="/kallu" className="custom-link sechead" state={{ message: 'Please log in with your username and password.' }}>Workout Types</Link>
+                <Link to="/diet" className="custom-link sechead" state={{ message: 'Please log in with your username and password.' }}>Diet</Link>
+                <Link to="/track" className="custom-link sechead" state={{ message: 'Please log in with your username and password.' }}>Track</Link>
+              </nav>
+            </div>
+          </div>
+        </nav>
+      </div>
                     <div>
                     <div class="wcu-section p-4">
         
