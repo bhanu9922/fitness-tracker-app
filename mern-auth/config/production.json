@@ -1,0 +1,8 @@
+{
+    "db": {
+      "uri": "mongodb+srv://appalabhanu123:Bhanu134@cluster0.wdcayp8.mongodb.net/productiondb"
+    },
+    "port": 5000,
+    "logLevel": "info"
+  }
+  

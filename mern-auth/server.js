@@ -7,6 +7,7 @@ const userRoutes = require('./routes/userRoutes');
 const profileRoutes=require('./routes/profileRoutes')
 const goalRoutes = require('./routes/goalRoutes');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 
 
@@ -14,6 +15,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const dbUri = process.env.MONGO_URI || 'mongodb+srv://appalabhanu123:Bhanu134@cluster0.wdcayp8.mongodb.net/';
+const logLevel = process.env.LOG_LEVEL || 'debug';
 
 //connectDB
 
