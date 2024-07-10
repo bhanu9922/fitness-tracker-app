@@ -17,6 +17,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const dbUri = process.env.MONGO_URI || 'mongodb+srv://appalabhanu123:Bhanu134@cluster0.wdcayp8.mongodb.net/';
 const logLevel = process.env.LOG_LEVEL || 'debug';
+app.get('/api/users', (req, res) => {
+  res.json({ message: 'Users data' });
+});
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'build')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+}
 
 //connectDB
 
