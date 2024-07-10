@@ -49,7 +49,7 @@ const App = () => {
         <Route path="/udhi" element={<WorkoutPlan />} />
         <Route path="/diet" element={<Diet />} />
         <Route path="/track" element={<Track />} />
-        <Route path="/*" element={<Navigate to="/home" state={{ message: 'Please log in with your username and password.' }} />} />
+        <Route path="/*" element={<Navigate to="/login" state={{ message: 'Please log in with your username and password.' }} />} />
       </Routes>
     </Router>
   );
