@@ -20,7 +20,7 @@ const dbUri = process.env.MONGO_URI || 'mongodb+srv://appalabhanu123:Bhanu134@cl
 const logLevel = process.env.LOG_LEVEL || 'debug';
 
 // Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 // Example API route
 app.get('/api/hello', (req, res) => {
@@ -29,7 +29,7 @@ app.get('/api/hello', (req, res) => {
 
 // Anything that doesn't match the above, send back index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
 
