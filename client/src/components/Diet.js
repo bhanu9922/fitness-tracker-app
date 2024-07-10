@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
+
+
 
 const Diet = () => {
+    const location = useLocation();
+const message = location.state?.message;
     const [diets, setDiets] = useState([]);
     const [currentDiet, setCurrentDiet] = useState({
         mealType: '',

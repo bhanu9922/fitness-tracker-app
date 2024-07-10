@@ -1,10 +1,12 @@
 // src/components/RegisterForm.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Profile = () => {
+  const location = useLocation();
+const messages = location.state?.messages;
   const [profile, setProfile] = useState({
     Name: '',
     Age: '',
@@ -40,7 +42,7 @@ const Profile = () => {
     <div className="box">
       <div className="col-12">
         <nav className="navbar navbar-expand-lg navbar-light bg-black navb">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand">
             <img src="https://res.cloudinary.com/dfu4raix4/image/upload/v1718950120/atklqo31snvpy22d82t9.png" className="img" />
           </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
