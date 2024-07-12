@@ -13,7 +13,7 @@ const RegisterForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/users/register', { username, password });
+      await axios.post('https://fitness-tracker-app-uu0j.onrender.com/api/users/register', { username, password });
       setMessage('Registration successful! You can now log in.');
       setIsSuccess(true);
     } catch (error) {
