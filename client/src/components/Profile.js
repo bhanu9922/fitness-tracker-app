@@ -31,7 +31,7 @@ const messages = location.state?.messages;
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/profile/bhanu', profile);
+      await axios.post('https://fitness-tracker-app-1.onrender.com/api/profile/bhanu', profile);
       setMessage('Registration successful!');
     } catch (error) {
       setMessage('Save failed. Please try again.');
