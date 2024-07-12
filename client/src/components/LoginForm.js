@@ -46,7 +46,7 @@ const LoginForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/users/login', { username, password });
+      const response = await axios.post('https://fitness-tracker-app-1.onrender.com/api/users/login', { username, password });
       const { token, user } = response.data;
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
