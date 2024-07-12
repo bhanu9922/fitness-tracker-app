@@ -22,6 +22,11 @@ app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello from server!' });
 });
 
+// Add this route to handle requests to the root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the Fitness Tracker App');
+})
+
 
 
 
