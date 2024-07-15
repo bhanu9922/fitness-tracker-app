@@ -14,7 +14,7 @@ const WorkoutType = () => {
 
     const fetchWorkoutTypes = async () => {
         try {
-            const response = await axios.get('https://fitness-tracker-app-1.onrender.com/workout-types'); // Update this URL to your backend endpoint
+            const response = await axios.get('http//localhost:3000/workout-types'); // Update this URL to your backend endpoint
             setWorkoutTypes(response.data);
         } catch (error) {
             console.error('Error fetching workout types:', error);
@@ -23,7 +23,7 @@ const WorkoutType = () => {
 
     const addWorkoutType = async () => {
         try {
-            const response = await axios.post('https://fitness-tracker-app-1.onrender.com/workout-types', currentWorkoutType); // Update this URL to your backend endpoint
+            const response = await axios.post('http//localhost:3000/workout-types', currentWorkoutType); // Update this URL to your backend endpoint
             setWorkoutTypes([...workoutTypes, response.data]);
             setCurrentWorkoutType({ type: '', description: '' });
         } catch (error) {
@@ -38,7 +38,7 @@ const WorkoutType = () => {
 
     const saveWorkoutType = async () => {
         try {
-            const response = await axios.patch(`https://fitness-tracker-app-1.onrender.com/workout-types/${currentWorkoutType._id}`, currentWorkoutType); // Update this URL to your backend endpoint
+            const response = await axios.patch(`http//localhost:3000/workout-types/${currentWorkoutType._id}`, currentWorkoutType); // Update this URL to your backend endpoint
             const updatedTypes = workoutTypes.map(type =>
                 type._id === currentWorkoutType._id ? response.data : type
             );
@@ -52,7 +52,7 @@ const WorkoutType = () => {
 
     const deleteWorkoutType = async (id) => {
         try {
-            await axios.delete(`https://fitness-tracker-app-1.onrender.com/workout-types/${id}`); // Update this URL to your backend endpoint
+            await axios.delete(`http//localhost:3000/workout-types/${id}`); // Update this URL to your backend endpoint
             setWorkoutTypes(workoutTypes.filter(type => type._id !== id));
         } catch (error) {
             console.error('Error deleting workout type:', error);
